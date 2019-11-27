@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
           name="streamer",
-	  version="1.0",
+	  version="0.1",
           author="Udit Namdev",
 	  author_email="unamdev0@gmail.com",
 	  description="Stream movies directly from torrent without downloading",
@@ -13,8 +13,7 @@ setuptools.setup(
           long_description_content_type="text/markdown",
 	  url="https://github.com/unamdev0/streamer",
 	  license='MIT',
-	  packages=["streamer"],
-	  scripts=["streamer"],
+	  packages=['streamer'],
         keywords = ['Torrent', 'Stream', 'Movies','Series','Streamer','Magnet link','utorrent','piratebay','yify'], 
           classifiers=[
                 "Programming Language :: Python :: 3",
@@ -24,4 +23,9 @@ setuptools.setup(
 	  install_requires=[
 		  'BeautifulSoup4',
 		  'requests'],
+          entry_points = {
+        'console_scripts': [
+            'streamer = streamer.__main__:main'
+        ]
+    },
 	  zip_safe=False)

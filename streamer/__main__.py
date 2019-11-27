@@ -141,7 +141,8 @@ def startApp():
     except Exception:
         exit(0)
 
-if __name__=="__main__":
+
+def main():
     check=checkDependency()
     if(check==False):
         exit(0)
@@ -149,6 +150,11 @@ if __name__=="__main__":
         startApp()
     except Exception:
         exit(0) 
+
+    
+
+if __name__=="__main__":
+    main()
         
         
         
