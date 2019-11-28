@@ -5,7 +5,7 @@ A python tool used to stream movies and series torrent directly in VLC media pla
 ## Installation
 
 ```
-$ pip install streamer
+pip install streamer
 ```
 
 ### Usage
