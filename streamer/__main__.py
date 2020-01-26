@@ -1,3 +1,4 @@
+
 import os
 import subprocess
 import sys
@@ -6,7 +7,7 @@ import re
 from bs4 import BeautifulSoup
 import requests 
 
-preUrl = "https://indiaprox.org"
+preUrl = "https://indiapirate.org"
 postUrl="/0/7/0"
 
 def scrape(url,search):
@@ -158,4 +159,4 @@ if __name__=="__main__":
         
         
         
-    
+   

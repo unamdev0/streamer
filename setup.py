@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
           name="streamer",
-	  version="0.1",
+	  version="0.5.1",
           author="Udit Namdev",
 	  author_email="unamdev0@gmail.com",
 	  description="Stream movies directly from torrent without downloading",
@@ -22,6 +22,7 @@ setuptools.setup(
           ],
 	  install_requires=[
 		  'BeautifulSoup4',
+                 
 		  'requests'],
           entry_points = {
         'console_scripts': [
