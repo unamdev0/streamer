@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 import requests 
 
 preUrl = "https://indiapirate.org"
-postUrl="/0/7/0"
+postUrl="&orderby=99"
 
 def scrape(url,search):
     request = requests.get(url)
@@ -43,8 +43,8 @@ def movie(name,quality=None):
         name=name.replace(' ','%20')
         if quality:
             name = name+"%20"+quality
-        url = preUrl+"/search/"+name+postUrl
-        parseUrl =scrape(url,'/torrent/')
+        url = preUrl+"/search.php?q="+name+postUrl
+        parseUrl =scrape(url,'/description.php')
         url = preUrl+parseUrl
         torrent = scrape(url,'magnet:')
         link(torrent)
@@ -62,8 +62,8 @@ def series(name,episode,quality=None):
         name=name+"%20"+episode
         if quality:
             name = name+"%20"+quality
-        url = preUrl+"/search/"+name+postUrl
-        parseUrl =scrape(url,'/torrent/')
+        url = preUrl+"/search.php?q="+name+postUrl
+        parseUrl =scrape(url,'/description.php')
         url = preUrl+parseUrl
         torrent = scrape(url,'magnet:')
         link(torrent)
